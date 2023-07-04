@@ -1,0 +1,743 @@
+/* AQUI FICA AS FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Licorice&family=Poppins:wght@100;200;300&display=swap');
+
+/* AQUI FICA TODO CONTEÚDO */
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.signup{
+    align-self: center;
+}
+
+.formulario{
+    min-width: 264px;
+}
+
+/*AQUI FICA O BOTÃO*/
+#btn_entrar{
+    background-color: #ffb327;
+    border: none;
+    width: 200px;
+    height: 30px;
+    align-self: center;
+    margin-top: 10px;
+    cursor:pointer;
+
+}
+
+#bt_cadastrar{
+    border-radius: 2px;
+    background-color: #ffb327;
+    border: none;
+    width: 230px;
+    height: 30px;
+    box-shadow: 0px 0px 5px 0px #1f241f;
+}
+
+
+/* AQUI FICA A SESSÃO ONDE TUDO ESTÁ INSRIDO- DEFINIMOS A COR, TAMANHO MINIMO, POSIÇÃO, DISPLAY E TRANSIÇÕES*/
+section
+{
+    position: relative;
+    min-height: 100vh;
+    background: radial-gradient(#1f241f, #282828);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    transition: 0.5s;
+}
+/* AQUI FICA O ESPAÇO ONDE ATUAM OS DOIS FORMULÁRIOS QUANDO ESTÃO OU NÃO APARECENDO*/
+section .container
+{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #FFF;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);   
+    overflow: hidden;
+}
+/* AQUI FICA A CLASS USUARIO QUE DEFINE O TAMANHO EFETIVO DO USUARIO*/
+section .container .usuario
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+/* AQUI FICA O COMPORTAMENTO DO ESPAÇO ONDE FICA AS IMAGENS DOS FORMULÁRIOS*/
+section .container .usuario .imgBx
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: 0.5s;
+}
+/* AQUI FICA O COMPORTAMENTO DAS IMAGENS DOS FORMULÁRIOS*/
+section .container .usuario .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* AQUI FICA O COMPORTAMENTO DO ESPAÇO DOS FORMULÁRIOS*/
+section .container .usuario .formulario
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    transition: 0.5s;
+}
+/* AQUI FICA O TITULO DOS FORMULÁRIOS*/
+section .container .usuario .formulario #h2
+{
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #555;
+}
+/* AQUI FICA OS INPUTS DOS FORMULÁRIOS*/
+section .container .usuario .formulario input
+{
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    color: #333;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    margin: 8px 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+    box-shadow: 0px 0px 5px 0px #1f241f;
+}
+/* AQUI FICA O BOTÃO DOS FORMULÁRIOS*/
+section .container .usuario .formulario input[type="submit"]
+{
+ max-width: 100%;
+ background-color: #ffb327;
+ color: #fff;
+ cursor: pointer;
+ font-size: 14px;
+ font-weight: 500;
+ letter-spacing: 1px;
+ transition: 0.5s;
+}
+/* AQUI FICA O BOTÃO DO FORMULÁRIO DE LOGIN*/
+section .container .usuario.cadastro .formulario input[type="submit"]
+{
+background: #ffb327;
+}
+/* AQUI FICA O O FOMULÁRIO DE LOGIN*/
+section .container .usuario .formulario .signup
+{
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+/* AQUI FICA O LINK DO FORMUARIO DE LOGIN*/
+section .container .usuario .formulario .signup a
+{
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffb327;
+}
+/* AQUI FICA RETIRA-SE AS AÇÕES DO FORUMLÁRIO DE CADASTRO*/
+section .container .cadastro
+{
+pointer-events: none;
+}
+/* AQUI FICA ADICIONA-SE AS AÇÕES DO FORUMLÁRIO DE CADASTRO AO SER CHAMADO*/
+section .container.active .cadastro
+{
+pointer-events: initial;
+}
+/* AQUI FICA O FORMULÁRIO DE LOGIN*/
+section .container .usuario.cadastro .formulario 
+{
+    top: 100%;
+}
+/* AQUI FICA A IMAGEM DE LOGIN*/
+section .container .usuario.cadastro .imgBx 
+{
+    top: -100%;
+    transition: 0.5s;
+}
+/* AQUI FICA O FORMULÁRIO DE LOGIN AO SER CHAMADO*/
+section .container.active .usuario.cadastro .formulario 
+{
+    top: 0;
+    align-items: center;
+}
+/* AQUI FICA A IMAGEM DE LOGIN AO SER CHAMADO*/
+section .container.active .usuario.cadastro .imgBx 
+{
+    top: 0;
+}
+/* AQUI FICA O FORMULÁRIO DE CADASTRO*/
+section .container .login.formulario
+{
+    top:0;
+}
+/* AQUI FICA O FORMULÁRIO DE CADASTRO AO SER CHAMADO*/
+section .container.active .login.formulario
+{
+    top:100%;
+}
+/* AQUI FICA A IMAGEM DE CADASTRO*/
+section .container .login.imgBx
+{
+    top:0;
+    transition: 0.5s;
+}
+/* AQUI FICA A IMAGEM DE CADASTRO AO SER CHAMADO*/
+section .container.active .login.imgBx
+{
+    top:-100%;
+}
+
+
+@media (max-width:670px) {
+    
+ 
+    .imgBx{
+        display: none;
+    }
+
+    .formulario #h2{
+        padding-bottom: 25%;
+        padding-left: 3%;
+    }
+
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 37%;
+        padding-left: 10%;
+        width: 82.4% ;
+        align-self: center;
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        padding-left: 10%;
+        align-self: center;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        width: 82.4% ;
+    }
+
+    section .container .usuario .formulario{
+        width: 100%;
+    }
+
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        height: 10%;
+        bottom: 15%;
+        left: 27%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: auto;
+    }
+
+    #bt_cadastrar{
+        border-radius: 2px;
+        background-color: #ffb327;
+        border: none;
+        width: 220px;
+        height: 30px;
+    }
+
+    *{
+        transition: 1s;
+    }
+}
+
+@media (max-width:518px) {
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        height: 9%;
+        bottom: 15%;
+        align-self: auto;
+    }
+
+    *{
+        transition: 1s;
+    }
+   
+}
+
+
+@media (max-width:542px) {
+
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        bottom: 15%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: auto;
+    }
+
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 9%;
+        padding-left: 37%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 9%;
+        padding-left: 10%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+    }
+   
+    *{
+        transition: 1s;
+    }
+
+}
+
+@media (max-width:574px) {
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        bottom: 15%;
+        align-self: auto;
+    }
+   
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 9%;
+        padding-left: 37%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    section .container .usuario .formulario #h2{
+        padding-bottom: 25%;
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 9%;
+        padding-left: 10%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+    }
+
+    *{
+        transition: 1s;
+    }
+
+}
+
+@media (max-width:588px) {
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        bottom: 15%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: auto;
+    }
+
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 9%;
+        padding-left: 37%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 9%;
+        padding-left: 10%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+    }
+
+    *{
+        transition: 1s;
+    }
+   
+}
+
+@media (max-width:528px) {
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        bottom: 15%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: auto;
+    }
+   
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 7%;
+        padding-left: 37%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 7%;
+        padding-left: 10%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+    }
+
+    }
+
+    *{
+        transition: 1s;
+    }
+
+
+@media (max-width:492px) {
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        bottom: 15%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: auto;
+    }
+   
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 7%;
+        padding-left: 35%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 7%;
+        padding-left: 10%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+    }
+
+    *{
+        transition: 1s;
+    }
+
+    section .container .usuario .formulario #h2{
+        padding-bottom: 35%;
+    }
+
+}
+
+
+@media (max-width:390px) {
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 7%;
+        padding-left: 35%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 7%;
+        padding-left:35%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    *{
+        transition: 1s;
+    }
+}
+
+
+@media (max-width:508px) {
+    .imgBx{
+        display: none;
+    }
+
+    *{
+        transition: 1s;
+    }
+}
+
+@media (max-width:497px) {
+
+
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        bottom: 15%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: auto;
+    }
+
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 8%;
+        padding-left: 45%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 8%;
+        padding-left:45%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    *{
+        transition: 1s;
+    }
+   
+}
+
+@media (max-width:460px) {
+
+    .formulario #h3{
+        padding-bottom: 10%;
+        padding-left: 5%;
+    }
+
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        bottom: 15%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: auto;
+    }
+
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 4%;
+        padding-left: 40%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 4%;
+        padding-left:40%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+   
+    *{
+        transition: 1s;
+    }
+}
+
+
+
+
+@media (max-width:480px) {
+
+
+    .formulario #h3{
+        padding-bottom: 10%;
+        padding-left: 5%;
+    }
+
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        bottom: 15%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: auto;
+    }
+
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 4%;
+        padding-left: 40%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: center;
+        padding-left: 10%;
+
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 4%;
+        padding-left:40%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: center;
+        padding-left: 10%;
+
+    }
+    *{
+        transition: 1s;
+    }
+   
+}
+
+
+
+
+
+
+
+@media (max-width:370px) {
+
+    *{
+        transition: 1s;
+    }
+
+
+    .formulario #h3{
+        padding-bottom: 15%;
+        padding-left: 5%;
+    }
+
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        bottom: 15%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: auto;
+    }
+
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 8%;
+        padding-left: 35%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+ 
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 8%;
+        padding-left:35%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    #btn_entrar{
+        background-color: #ffb327;
+        position: relative;
+        border: none;
+        width: 48%;
+        height: 7%;
+        bottom: 15%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        align-self: auto;
+    }
+   
+    #nome_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 7%;
+        padding-left: 35%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    #senha_login{
+        bottom: 25%;
+        position: relative;
+        margin-left: 7%;
+        box-shadow: 0px 0px 5px 0px #1f241f;
+        padding-left: 10%;
+
+    }
+
+    *{
+        transition: 1s;
+    }
+
+    section .container .usuario .formulario #h2{
+        padding-bottom: 45%;
+    }
+   
+}
+

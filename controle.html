@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/controle.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="CSS/main2.css">
+  <link rel="stylesheet" href="CSS/menu.css">
+  <script src="rotas.js"></script>
+
+
+  
+  <script src="logout.js"></script>
+  <script src="autenticar.js"></script>
+    <title>Controle</title>
+    <style>
+        .sumiu{
+            display: none;
+        }
+    </style>
+
+</head>
+
+
+<body id="body">
+
+    <div class="modal" id="modalDeletar">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2>DESEJA REALMENTE EXCLUIR?</h2>
+                <span class="modal-close" id="modalCloseExcluir">&#10006;</span>
+            </header>
+        
+            <footer class="modal-footer">
+                <button id="excluir" class="button blue">EXCLUIR</button>
+            </footer>
+        </div>
+    </div>
+
+    <header id="menu">
+            <!--LOGO-->
+    <a><img src="img/vex dourado.png" class="logo"></a>
+            <!--FIM DO LOGO-->
+    <div class="toggle"></div>
+            <!--MENU-->
+        <ul class="menu">
+
+        <li><a id="#controle" class="controle_menu" style="overflow-y: hidden;" href="controle.html">Controle</a></li>
+        <li><a id= "#metas" class="sobre_menu" style="overflow-y: hidden;" href="metas.html">Metas</a></li>
+        <li><a id="#graficos" class="servico_menu" style="overflow-y: hidden;" href="graphicos.html">Gráficos</a></li>
+        <li><a id="#sair"class="servico_menu" style="overflow-y: hidden;" onclick="sair();">Sair</a></li>
+       
+        </ul>
+    <!--MENU-->
+    </header>
+    <script src="menu.js"></script>
+    <div class="sc-hKgJUU frdCTY" style="padding-top: 13%;" id="counteuld">
+        <div class="sc-jrAFXE eqoOME" style="flex-direction: column; flex-wrap: wrap; align-content: stretch; justify-content: space-evenly; align-items: stretch; z-index: 1000;">
+            <div class="sc-kEjbQP fuVdYh">
+                <div class="sc-iqHYmW jklSBJ setleft" id="anterior"><span class="material-symbols-outlined unselectable">
+                    arrow_forward_ios
+                    </span></div>
+                <div class="sc-crrszt cPfwyB" id="mes">Abril de 2022</div>
+                <div class="sc-iqHYmW jklSBJ setright" id="proximo"><span class="material-symbols-outlined unselectable">
+                    arrow_back_ios
+                    </span></div>
+            </div>
+            <div class="sc-dQoVA klQxRK">
+                <div class="sc-bqyKOL fXEhmA">
+                    <div class="sc-kstqJO bQkMyN">Ganhos</div>
+                    <div class="sc-hBEYId hZHyLH" id="ganhoInicial">R$00</div>
+                </div>
+                <div class="sc-bqyKOL fXEhmA">
+                    <div class="sc-kstqJO bQkMyN">Despesas</div>
+                    <div class="sc-hBEYId hZHyLH" style="color:rgb(255, 0, 0);" id="despesaInicial">R$00</div>
+                </div>
+                <div class="sc-bqyKOL fXEhmA">
+                    <div class="sc-kstqJO bQkMyN">Balanço</div>
+                    <div color="green" class="sc-hBEYId ftQMvP" id="balanco">R$00</div>
+                </div>
+            </div>
+        </div>
+        <div class="sc-fodVek fgloXw">
+            <label class="sc-fFucqa hmyJIQ">
+                <div class="sc-bkzYnD kLxSip">Titulo</div>
+                <input type="text" class="sc-idOiZg rwnMw" value="" id="titulo">
+            </label>
+            <label class="sc-fFucqa hmyJIQ">
+                <div class="sc-bkzYnD kLxSip">Categoria</div>
+                <select class="sc-dIUeWJ gesRgG" id="categoria">
+                    <option>
+
+                    </option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Entretenimento">Entretenimento</option>
+                    <option value="Habitação">Habitação</option>
+                    <option value="Salário">Salário</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Seguros">Seguros</option>
+                    <option value="Transportes">Transportes</option>                
+                    <option value="Outros">Outros</option>
+                    
+                </select>
+            </label>
+            
+          <label class="sc-fFucqa hmyJIQ">
+            <div class="sc-bkzYnD kLxSip">Transferência</div>
+            <select class="sc-dIUeWJ gesRgG" id="transferencia">
+
+                <option>
+                  
+                </option>
+                <option value="Receita">Receita</option>
+                <option value="Despesa">Despesa</option>
+            </select>
+        </label>
+                <label class="sc-fFucqa hmyJIQ">
+                    <div class="sc-bkzYnD kLxSip">Valor</div>
+                    <input type="number" class="sc-idOiZg rwnMw  myInput" value="" id="valor" min="1" onkeypress="return event.charCode != 45"></label>
+                    <label class="sc-fFucqa hmyJIQ">
+                        <div class="sc-bkzYnD kLxSip">&nbsp;</div>
+                        <button class="sc-hHfuMS dcAQVR" id="adicionar">Adicionar</button>
+                        <button class="sc-hHfuMS dcAQVR sumiu" id="editar">Editar</button>
+                    </label>
+                </div>
+                <table class="bkasyz">
+                        <thead>
+
+                            <th width=""class="fgyv">Para ver mais informações, arraste para o lado</th>
+
+                            <tr>
+                                <th class="sc-jSgvzq fouaSj alignTitulo">Título</th>
+                                <th width="130" class="fcmwIe alignCategoria">Categoria</th>
+                                <th width="100" class="gyieuF alignData">Dia | Horas</th>
+                                <th width="100" class="jaAmsI alignValor">Transf</th>
+                                <th width="150" class="jaAmsI alignValor">Valor</th>
+                                <th width="130" style="color: white; text-align: start; position: relative; left: 16px;">Ações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tbody">
+                            
+                        </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="IdVerdadeiro"></div>
+                    <div id="guardaOmes" style="color: white; display: none;" ></div>
+                </div>
+        <script src="pegaId.js"></script>
+        <script type="module" src="controle.js"></script>
+        <script src="modalExcluir.js"></script>
+        <script src="opacida.js"></script>
+        <script>  
+
+var input = document.querySelector(".myInput");
+input.addEventListener("keypress", function(e) {
+    if(!checkChar(e)) {
+      e.preventDefault();
+  }
+});
+function checkChar(e) {
+    var char = String.fromCharCode(e.keyCode);
+  
+  console.log(char);
+    var pattern = '[,-a-zA-Z0-9]';
+    if (char.match(pattern)) {
+      return true;
+  }
+}
+
+        </script>

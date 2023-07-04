@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200&display=swap');
+
+
+
+/* Works on Firefox */* {    scrollbar-width: thin;    scrollbar-color: rgb(19, 18, 18);    border-radius: 5px;  }    
+/* Works on Chrome, Edge, and Safari */  *::-webkit-scrollbar {    width: 12px;    border-radius: 10px;  }    
+*::-webkit-scrollbar-track {    background: rgb(19, 18, 18);    border-radius: 10px;  }    
+*::-webkit-scrollbar-thumb {    background-color: #f5c116;    border-radius: 20px;    border: 3px solid #333;    border-radius: 10px;  }
+
+
+
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.frdCTY{width:70%;
+}
+
+.doughnut-chart1{
+    height: 50px;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.graphalign{
+    display: flex;;
+}
+
+
+
+
+.setleft{
+    display: inline-table;
+    color: white;
+    padding-right: 500px;
+    cursor: pointer;
+}
+
+.setright{
+    display: inline-table;
+    color: white;
+    cursor: pointer;
+}
+
+#mes{
+    display: inline-table;
+    padding: 3%;
+    font-size: 42px;
+}
+
+
+
+
+.cPfwyB {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 120px;
+    text-align: center;
+    }
+
+.cPfwyB {
+    color: white;
+    font-size: x-large;
+    }
+
+body{
+    background-color: #202020;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.selectBox{
+    color: white;
+    font-family: 'Saira Condensed', cursive;
+    font-size: 19px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    stroke-dasharray: none;
+    left: 20px;
+    position: relative;
+}
+
+.rein:hover,
+.rein:focus {
+  box-shadow:inset 0 0 0 2em var(--hover);
+  color: black;
+  font-size: 28px;
+  
+}
+.rein {
+    --color: #fff;
+    --hover: #f5c116;
+}
+.rein {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    color: var(--color);
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: 25px;
+    width: 500px;
+}
+
+
+.eqoOME {
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    max-width: 400px;
+ }
+ .fuVdYh {
+
+width: 1000px;
+  padding: 20px;
+bottom: 80px;
+right: 120px;
+position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  flex-direction: row-reverse;
+  align-items: center;
+  }
+
+  #body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  #selectBoxBar2{
+    color: white;
+    border-radius: 5px;
+    margin-top: 2%;
+}
+.meta-chart{
+    background-color: white;
+    margin-top: 20%;
+    border-radius: 5px;
+}
+#meta-chart{
+    width: 300px;
+}
+
+/* alterações fora do media*/
+#firstgraph.line-chart{
+    background-color: white;
+    margin-top: 15%;
+    border-radius: 5px;
+    height: 95%;
+    width: 95%;
+    margin-right: 2%;
+    margin-left: 2%;
+    z-index: -1;
+    
+}
+
+#secondgraph.bar-chart{
+    background-color: white;
+    margin-top: 15%;
+    border-radius: 5px;
+    height: 95%;
+    width: 95%;
+    margin-right: 2%;
+    margin-left: 2%;
+    z-index: -1;
+    
+}
+
+.meta-chart{
+    background-color: white;
+    margin-top: 15%;
+    border-radius: 5px;
+    height: 95%;
+    width: 95%;
+    margin-right: 2%;
+    margin-left: 2%;
+    z-index: -1;
+    
+}
+/*alterações fora do media*/
+
+.doughnut-chart1 {
+    background-color: white;
+    margin-top: 15%;
+    border-radius: 5px;
+    height: 95%;
+    width: 95%;
+    margin-right: 2%;
+    margin-left: 2%;
+    z-index: -1;
+    
+}
+
+.doughnut-chart2 {
+    background-color: white;
+    margin-top: 15%;
+    border-radius: 5px;
+    height: 95%;
+    width: 95%;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+.teste {
+    background-color: #f5c116;
+}
+
+
+
+@media (max-width:1024px) {
+    .menu{
+        right: 100px;
+        position: relative;
+    }
+}
+
+@media (max-width:1280px) {
+    .menu{
+        right: 100px;
+        position: relative;
+    }
+}
